@@ -5,7 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 
-open class ActivityUtil(val context: Context?) {
+class ActivityUtil(val context: Context?) {
 
     var useAnimation = false
     var animationIn = -1

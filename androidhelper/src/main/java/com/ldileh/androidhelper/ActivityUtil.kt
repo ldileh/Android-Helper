@@ -42,8 +42,12 @@ class ActivityUtil(val context: Context?) {
         sendData = data
     }
 
-    fun showPage(classTarget: Class<*>) = context?.let {
-        it.startActivity(Intent(it, classTarget))
+    fun showPage(classTarget: Class<*>) = context?.let { it ->
+        val intent = Intent(it, classTarget)
+        sendData?.let { bundle ->
+            intent.putExtras(bundle)
+        }
+        it.startActivity(intent)
 
         if(useAnimation && it is Activity){
             it.apply {

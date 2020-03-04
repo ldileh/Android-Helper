@@ -33,6 +33,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
-    //implementation 'com.github.ldileh:Android-Helper:0.01'
-    implementation project(path: ':androidhelper')
+    implementation 'com.github.ldileh:Android-Helper:v0.02'
+    //implementation project(path: ':androidhelper')
 }

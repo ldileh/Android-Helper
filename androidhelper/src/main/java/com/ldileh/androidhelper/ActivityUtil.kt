@@ -52,11 +52,13 @@ class ActivityUtil(val context: Context?) {
         if(useAnimation && it is Activity){
             it.apply {
                 overridePendingTransition(animationIn, animationOut)
+            }
+        }
 
-                when(optionClose){
-                    FINISH_CURRENT -> finish()
-                    FINISH_ALL -> finishAffinity()
-                }
+        if(it is Activity){
+            when(optionClose){
+                FINISH_CURRENT -> it.finish()
+                FINISH_ALL -> it.finishAffinity()
             }
         }
     }

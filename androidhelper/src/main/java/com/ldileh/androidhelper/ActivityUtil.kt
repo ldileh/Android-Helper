@@ -10,7 +10,7 @@ class ActivityUtil(val context: Context?) {
     var useAnimation = false
     var animationIn = -1
     var animationOut = -1
-    var optionClose = FINISH_CURRENT
+    var optionClose = -1
     var sendData: Bundle? = null
 
     companion object{
